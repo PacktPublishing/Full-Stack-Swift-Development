@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Author" representedClassName="Author" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="posts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SavedPost" inverseName="author" inverseEntity="SavedPost" syncable="YES"/>
+    </entity>
+    <entity name="SavedPost" representedClassName="SavedPost" syncable="YES" codeGenerationType="class">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="author" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Author" inverseName="posts" inverseEntity="Author" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="SavedPost" positionX="-27" positionY="18" width="128" height="75"/>
+        <element name="Author" positionX="-18" positionY="36" width="128" height="90"/>
+    </elements>
+</model>
